@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>QuizApp — UI Mockups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0a0a12;--bg2:#111122;--bgc:#161628;
+  --y:#f5e642;--c:#00e5ff;--p:#ff3d8b;--g:#00e676;
+  --t1:#f0f0ff;--t2:#8888aa;--tm:#44445a;
+  --b:rgba(255,255,255,0.08);
+}
+body{background:#1a1a2e;font-family:'Space Grotesk',sans-serif;color:#f0f0ff;padding:2rem;}
+h1.title{font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:800;color:var(--y);text-align:center;margin-bottom:0.25rem;}
+.subtitle{text-align:center;color:var(--t2);margin-bottom:3rem;font-size:0.95rem;}
+.screen-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:2.5rem;}
+.screen-wrap{display:flex;flex-direction:column;gap:0.75rem;}
+.screen-label{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;color:var(--c);letter-spacing:0.05em;display:flex;align-items:center;gap:0.5rem;}
+.screen-label span{background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.2);border-radius:6px;padding:0.1rem 0.5rem;font-size:0.8rem;}
+.screen{background:var(--bg);border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.5);width:100%;}
+/* Shared screen components */
+.s-nav{background:var(--bg2);border-bottom:1px solid var(--b);padding:0.7rem 1.1rem;display:flex;justify-content:space-between;align-items:center;}
+.s-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;color:var(--y);}
+.btn{display:inline-flex;align-items:center;padding:0.45rem 1rem;border-radius:8px;font-size:0.78rem;font-weight:700;cursor:pointer;}
+.btn-y{background:var(--y);color:#0a0a12;}
+.btn-c{background:var(--c);color:#0a0a12;}
+.btn-o{background:transparent;border:1px solid var(--b);color:var(--t2);}
+.badge{display:inline-flex;align-items:center;padding:0.2rem 0.6rem;border-radius:100px;font-size:0.7rem;font-weight:600;}
+.by{background:rgba(245,230,66,0.15);color:var(--y);}
+.bc{background:rgba(0,229,255,0.12);color:var(--c);}
+.bg{background:rgba(0,230,118,0.12);color:var(--g);}
+.card{background:var(--bgc);border:1px solid var(--b);border-radius:12px;padding:1.2rem;}
+.input{background:var(--bg2);border:1px solid var(--b);color:var(--t1);border-radius:8px;padding:0.55rem 0.9rem;font-size:0.82rem;width:100%;font-family:'Space Grotesk',sans-serif;}
+.input:focus{border-color:var(--c);}
+label{font-size:0.75rem;font-weight:600;color:var(--t2);display:block;margin-bottom:0.3rem;}
+</style>
+</head>
+<body>
+
+<h1 class="title">⚡ QuizApp — UI Mockups</h1>
+<p class="subtitle">Electric Arcade Design System · 8 Key Screens</p>
+
+<div class="screen-grid">
+
+<!-- ═══════════ SCREEN 1: LANDING ═══════════ -->
+<div class="screen-wrap">
+  <div class="screen-label">01 <span>Landing Page</span></div>
+  <div class="screen" style="min-height:420px;">
+    <div class="s-nav">
+      <div class="s-logo">⚡ QUIZAPP</div>
+      <div style="display:flex;gap:0.5rem;">
+        <div class="btn btn-o">Log In</div>
+        <div class="btn btn-y">Sign Up</div>
+      </div>
+    </div>
+    <div style="padding:2.5rem 1.5rem;background:radial-gradient(ellipse at 30% 50%,rgba(0,229,255,0.06),transparent 60%),var(--bg);">
+      <div style="display:inline-block;background:rgba(245,230,66,0.1);color:var(--y);padding:0.2rem 0.75rem;border-radius:100px;font-size:0.7rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.1em;text-transform:uppercase;">Real-Time Quiz Platform</div>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:2.8rem;font-weight:800;line-height:1.05;margin-bottom:0.75rem;">Engage Your<br/>Audience <span style="color:var(--c);">Live.</span></h2>
+      <p style="color:var(--t2);font-size:0.85rem;margin-bottom:1.5rem;max-width:280px;">Build interactive quizzes, launch them in seconds, and watch your audience compete in real time.</p>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <div class="btn btn-y" style="padding:0.65rem 1.4rem;font-size:0.85rem;">Create a Quiz →</div>
+        <div class="btn btn-o" style="padding:0.65rem 1.4rem;font-size:0.85rem;">Join with Code</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem;margin-top:2rem;">
+        {{'🎮 Real-Time|🏆 Leaderboard|🔗 Room Code'.split('|').map(f => '')}}
+        <div style="background:var(--bgc);border:1px solid var(--b);border-radius:10px;padding:0.85rem;text-align:center;font-size:0.75rem;color:var(--t2);">🎮<br/>Real-Time</div>
+        <div style="background:var(--bgc);border:1px solid var(--b);border-radius:10px;padding:0.85rem;text-align:center;font-size:0.75rem;color:var(--t2);">🏆<br/>Leaderboard</div>
+        <div style="background:var(--bgc);border:1px solid var(--b);border-radius:10px;padding:0.85rem;text-align:center;font-size:0.75rem;color:var(--t2);">🔗<br/>Room Code</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SCREEN 2: REGISTER ═══════════ -->
+<div class="screen-wrap">
+  <div class="screen-label">02 <span>Register</span></div>
+  <div class="screen">
+    <div style="padding:2rem 1.5rem;background:radial-gradient(ellipse at 80% 20%,rgba(156,77,255,0.06),transparent 60%),var(--bg);">
+      <div style="text-align:center;margin-bottom:1.5rem;">
+        <div class="s-logo" style="font-size:1.5rem;">⚡ QUIZAPP</div>
+      </div>
+      <div class="card" style="max-width:320px;margin:0 auto;">
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;margin-bottom:0.25rem;">Create account</h3>
+        <p style="color:var(--t2);font-size:0.78rem;margin-bottom:1.25rem;">Join the platform and start quizzing</p>
+        <div style="display:flex;flex-direction:column;gap:0.85rem;">
+          <div><label>Full Name</label><input class="input" placeholder="Your name" style="background:var(--bg2);border:1px solid var(--b);color:var(--t1);border-radius:8px;padding:0.55rem 0.9rem;font-size:0.82rem;width:100%;"/></div>
+          <div><label>Email</label><input class="input" placeholder="you@example.com" style="background:var(--bg2);border:1px solid var(--b);color:var(--t1);border-radius:8px;padding:0.55rem 0.9rem;font-size:0.82rem;width:100%;"/></div>
+          <div><label>Password</label><input class="input" type="password" placeholder="••••••••" style="background:var(--bg2);border:1px solid var(--b);color:var(--t1);border-radius:8px;padding:0.55rem 0.9rem;font-size:0.82rem;width:100%;"/></div>
+          <div>
+            <label>I am a...</label>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
+              <div style="padding:0.6rem;border-radius:8px;border:1px solid var(--c);background:rgba(0,229,255,0.08);color:var(--c);font-size:0.78rem;font-weight:600;text-align:center;">🎮 Participant</div>
+              <div style="padding:0.6rem;border-radius:8px;border:1px solid var(--b);color:var(--t2);font-size:0.78rem;font-weight:600;text-align:center;">🎤 Organizer</div>
+            </div>
+          </div>
+          <div class="btn btn-y" style="justify-content:center;padding:0.7rem;font-size:0.85rem;">Create Account →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SCREEN 3: DASHBOARD (ORGANIZER) ═══════════ -->
+<div class="screen-wrap">
+  <div class="screen-label">03 <span>Organizer Dashboard</span></div>
+  <div class="screen">
+    <div class="s-nav">
+      <div class="s-logo">⚡ QUIZAPP</div>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <span style="font-size:0.78rem;color:var(--t2);">Maria V. <span class="badge bc">ORGANIZER</span></span>
+        <div class="btn btn-o" style="font-size:0.72rem;padding:0.35rem 0.7rem;">Logout</div>
+      </div>
+    </div>
+    <div style="padding:1.25rem;background:var(--bg);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;">
+        <div>
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.7rem;">Dashboard</h3>
+          <p style="color:var(--t2);font-size:0.75rem;">Manage your quizzes and sessions</p>
+        </div>
+        <div class="btn btn-y" style="font-size:0.78rem;">+ Create Quiz</div>
+      </div>
+      <p style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;margin-bottom:0.85rem;color:var(--t2);letter-spacing:0.05em;">MY QUIZZES</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+        <div class="card" style="padding:1rem;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:0.6rem;"><span class="badge by">Science</span><span style="font-size:0.7rem;color:var(--tm);">10 q.</span></div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;margin-bottom:0.85rem;">Space Exploration Quiz</div>
+          <div class="btn btn-c" style="width:100%;justify-content:center;font-size:0.75rem;padding:0.5rem;">Launch ▶</div>
+        </div>
+        <div class="card" style="padding:1rem;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:0.6rem;"><span class="badge by">History</span><span style="font-size:0.7rem;color:var(--tm);">8 q.</span></div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;margin-bottom:0.85rem;">World Wars Trivia</div>
+          <div class="btn btn-c" style="width:100%;justify-content:center;font-size:0.75rem;padding:0.5rem;">Launch ▶</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SCREEN 4: QUIZ BUILDER ═══════════ -->
+<div class="screen-wrap">
+  <div class="screen-label">04 <span>Quiz Builder</span></div>
+  <div class="screen">
+    <div class="s-nav">
+      <div class="btn btn-o" style="font-size:0.72rem;">← Dashboard</div>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;">Create Quiz</span>
+      <div class="btn btn-y" style="font-size:0.75rem;">Save & Launch →</div>
+    </div>
+    <div style="display:grid;grid-template-columns:140px 1fr;gap:0;background:var(--bg);">
+      <!-- Left -->
+      <div style="padding:0.85rem;border-right:1px solid var(--b);background:var(--bg2);">
+        <div style="font-size:0.7rem;font-weight:600;color:var(--t2);margin-bottom:0.6rem;">SETTINGS</div>
+        <div style="background:var(--bgc);border:1px solid var(--b);border-radius:8px;padding:0.5rem;font-size:0.72rem;margin-bottom:0.5rem;color:var(--t2);">Space Quiz</div>
+        <div style="background:var(--bgc);border:1px solid var(--b);border-radius:8px;padding:0.5rem;font-size:0.72rem;margin-bottom:1rem;color:var(--tm);">Category: Science</div>
+        <div style="font-size:0.7rem;font-weight:600;color:var(--t2);margin-bottom:0.5rem;">QUESTIONS</div>
+        <div style="background:rgba(0,229,255,0.08);border:1px solid var(--c);border-radius:8px;padding:0.5rem;font-size:0.72rem;color:var(--c);margin-bottom:0.4rem;">Q1: What is…</div>
+        <div style="background:var(--bgc);border:1px solid var(--b);border-radius:8px;padding:0.5rem;font-size:0.72rem;color:var(--t2);margin-bottom:0.4rem;">Q2: How far…</div>
+        <div style="background:var(--bgc);border:1px solid var(--b);border-radius:8px;padding:0.5rem;font-size:0.72rem;color:var(--t2);margin-bottom:0.75rem;">Q3: Name the…</div>
+        <div class="btn btn-y" style="width:100%;justify-content:center;font-size:0.7rem;padding:0.4rem;">+ Add</div>
+      </div>
+      <!-- Right: Editor -->
+      <div style="padding:1rem;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;margin-bottom:0.85rem;">Question 1</div>
+        <div style="margin-bottom:0.75rem;">
+          <label>Question Text *</label>
+          <div style="background:var(--bg2);border:1px solid var(--b);border-radius:8px;padding:0.55rem 0.75rem;font-size:0.78rem;color:var(--t1);">What is the closest star to Earth?</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-bottom:0.75rem;">
+          <div><label>Type</label><div style="background:var(--bg2);border:1px solid var(--b);border-radius:8px;padding:0.45rem 0.6rem;font-size:0.72rem;color:var(--t1);">Single Choice</div></div>
+          <div><label>Time</label><div style="background:var(--bg2);border:1px solid var(--b);border-radius:8px;padding:0.45rem 0.6rem;font-size:0.72rem;color:var(--t1);">30s</div></div>
+          <div><label>Points</label><div style="background:var(--bg2);border:1px solid var(--b);border-radius:8px;padding:0.45rem 0.6rem;font-size:0.72rem;color:var(--t1);">100</div></div>
+        </div>
+        <label>Answer Options</label>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
+          <div style="display:flex;align-items:center;gap:0.4rem;border:2px solid var(--g);border-radius:8px;padding:0.4rem 0.6rem;background:rgba(0,230,118,0.07);">
+            <div style="width:16px;height:16px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#0a0a12;font-weight:700;flex-shrink:0;">✓</div>
+            <span style="font-size:0.75rem;">The Sun</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.4rem;border:1px solid var(--b);border-radius:8px;padding:0.4rem 0.6rem;">
+            <div style="width:16px;height:16px;border-radius:50%;border:1.5px solid var(--tm);flex-shrink:0;"></div>
+            <span style="font-size:0.75rem;color:var(--t2);">Alpha Centauri</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.4rem;border:1px solid var(--b);border-radius:8px;padding:0.4rem 0.6rem;">
+            <div style="width:16px;height:16px;border-radius:50%;border:1.5px solid var(--tm);flex-shrink:0;"></div>
+            <span style="font-size:0.75rem;color:var(--t2);">Sirius</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.4rem;border:1px solid var(--b);border-radius:8px;padding:0.4rem 0.6rem;">
+            <div style="width:16px;height:16px;border-radius:50%;border:1.5px solid var(--tm);flex-shrink:0;"></div>
+            <span style="font-size:0.75rem;color:var(--t2);">Proxima Centauri</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SCREEN 5: ORGANIZER LOBBY ═══════════ -->
+<div class="screen-wrap">
+  <div class="screen-label">05 <span>Organizer Lobby</span></div>
+  <div class="screen">
+    <div class="s-nav">
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;">Space Exploration Quiz</span>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <span style="color:var(--t2);font-size:0.72rem;">Room:</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.7rem;font-weight:800;color:var(--y);letter-spacing:0.1em;">XK7P2Q</span>
+      </div>
+      <div class="btn btn-o" style="font-size:0.72rem;">✕ End</div>
+    </div>
+    <div style="padding:1.5rem;background:var(--bg);text-align:center;">
+      <p style="color:var(--t2);font-size:0.8rem;margin-bottom:0.5rem;">Players join at quizapp.com/join with code</p>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:4rem;font-weight:800;color:var(--y);letter-spacing:0.35em;text-shadow:0 0 30px rgba(245,230,66,0.3);margin-bottom:0.5rem;">XK7P2Q</div>
+      <p style="color:var(--t2);font-size:0.82rem;margin-bottom:1.25rem;"><span style="color:var(--c);">4</span> players connected</p>
+      <div class="card" style="text-align:left;margin-bottom:1.25rem;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;color:var(--t2);margin-bottom:0.65rem;">PARTICIPANTS (4)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="badge bc">Alex</span>
+          <span class="badge bc">Maria</span>
+          <span class="badge bc">David</span>
+          <span class="badge bc">Priya</span>
+        </div>
+      </div>
+      <div class="btn btn-y" style="width:100%;justify-content:center;padding:0.85rem;font-size:0.9rem;">Start Quiz (10 questions) →</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SCREEN 6: LIVE QUESTION (PARTICIPANT) ═══════════ -->
+<div class="screen-wrap">
+  <div class="screen-label">06 <span>Live Question — Participant</span></div>
+  <div class="screen">
+    <div style="background:var(--bg2);border-bottom:1px solid var(--b);padding:0.6rem 1.1rem;display:flex;justify-content:space-between;align-items:center;">
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;color:var(--y);">⚡ Space Quiz</span>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;color:var(--c);">350 pts</span>
+      <span style="font-size:0.78rem;color:var(--t2);">Alex</span>
+    </div>
+    <div style="padding:1.25rem;background:var(--bg);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+        <span style="color:var(--t2);font-size:0.78rem;">Q2 of 10</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:800;color:var(--c);">18s</span>
+        <span style="color:var(--t2);font-size:0.78rem;">3/4 answered</span>
+      </div>
+      <!-- Timer bar -->
+      <div style="height:4px;background:var(--bgc);border-radius:2px;overflow:hidden;margin-bottom:1.1rem;">
+        <div style="width:60%;height:100%;background:var(--c);border-radius:2px;"></div>
+      </div>
+      <div class="card" style="text-align:center;margin-bottom:1rem;padding:1.25rem;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:700;">What is the closest star to Earth?</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.65rem;">
+        <div style="padding:0.85rem;border-radius:10px;background:rgba(245,230,66,0.15);border:2px solid rgba(245,230,66,0.4);font-weight:700;font-size:0.85rem;">The Sun</div>
+        <div style="padding:0.85rem;border-radius:10px;background:rgba(0,229,255,0.08);border:1px solid transparent;font-weight:600;font-size:0.85rem;color:var(--t2);">Alpha Centauri</div>
+        <div style="padding:0.85rem;border-radius:10px;background:rgba(255,61,139,0.08);border:1px solid transparent;font-weight:600;font-size:0.85rem;color:var(--t2);">Sirius</div>
+        <div style="padding:0.85rem;border-radius:10px;background:rgba(0,230,118,0.07);border:1px solid transparent;font-weight:600;font-size:0.85rem;color:var(--t2);">Proxima Centauri</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SCREEN 7: ANSWER REVEAL ═══════════ -->
+<div class="screen-wrap">
+  <div class="screen-label">07 <span>Answer Reveal + Mini Leaderboard</span></div>
+  <div class="screen">
+    <div class="s-nav">
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;">Space Exploration Quiz</span>
+      <span style="font-size:0.78rem;color:var(--t2);">Q2 of 10</span>
+    </div>
+    <div style="padding:1.25rem;background:var(--bg);">
+      <div class="card" style="margin-bottom:0.85rem;">
+        <div style="font-size:0.78rem;color:var(--t2);margin-bottom:0.5rem;">✓ CORRECT ANSWER</div>
+        <div style="color:var(--g);font-weight:700;font-size:1rem;">The Sun</div>
+      </div>
+      <div class="card">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;color:var(--t2);margin-bottom:0.75rem;">TOP 5 LEADERBOARD</div>
+        <div style="display:flex;flex-direction:column;gap:0.45rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.75rem;background:rgba(245,230,66,0.08);border-radius:8px;border:1px solid rgba(245,230,66,0.15);">
+            <span style="font-weight:700;color:var(--y);">#1 Alex</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;color:var(--c);">450 pts</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.75rem;background:var(--bg2);border-radius:8px;">
+            <span style="font-weight:600;">#2 Priya</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;color:var(--c);">390 pts</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.75rem;background:var(--bg2);border-radius:8px;">
+            <span style="font-weight:600;">#3 Maria</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;color:var(--c);">350 pts</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.75rem;background:var(--bg2);border-radius:8px;">
+            <span style="font-weight:600;color:var(--t2);">#4 David</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;color:var(--c);">200 pts</span>
+          </div>
+        </div>
+        <div style="color:var(--tm);font-size:0.75rem;text-align:center;margin-top:0.75rem;">Waiting for host to continue…</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SCREEN 8: FINAL LEADERBOARD ═══════════ -->
+<div class="screen-wrap">
+  <div class="screen-label">08 <span>Final Results</span></div>
+  <div class="screen">
+    <div style="padding:1.75rem 1.25rem;background:var(--bg);text-align:center;">
+      <div style="font-size:3rem;margin-bottom:0.5rem;">🏆</div>
+      <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;margin-bottom:0.25rem;">Quiz Complete!</h3>
+      <p style="color:var(--t2);font-size:0.8rem;margin-bottom:1.5rem;">Final standings for <strong>Space Exploration Quiz</strong></p>
+      <div class="card" style="text-align:left;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:0.7rem 0.85rem;margin-bottom:0.5rem;background:rgba(245,230,66,0.08);border-radius:10px;border:1px solid rgba(245,230,66,0.2);">
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span style="font-size:1.3rem;">🥇</span>
+            <span style="font-weight:700;">Alex</span>
+          </div>
+          <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;color:var(--c);">980</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 0.85rem;margin-bottom:0.5rem;background:rgba(200,200,200,0.04);border-radius:10px;border:1px solid rgba(200,200,200,0.1);">
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span style="font-size:1.3rem;">🥈</span>
+            <span style="font-weight:600;">Priya</span>
+          </div>
+          <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;color:var(--c);">850</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 0.85rem;margin-bottom:0.5rem;background:rgba(180,120,60,0.05);border-radius:10px;border:1px solid rgba(180,120,60,0.15);">
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span style="font-size:1.3rem;">🥉</span>
+            <span style="font-weight:600;">Maria</span>
+          </div>
+          <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;color:var(--c);">720</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0.85rem;border-radius:8px;">
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span style="color:var(--t2);font-weight:600;">#4 David</span>
+          </div>
+          <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;color:var(--t2);">530</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:0.75rem;margin-top:1.25rem;justify-content:center;">
+        <div class="btn btn-y" style="padding:0.65rem 1.4rem;">Play Again</div>
+        <div class="btn btn-o" style="padding:0.65rem 1.4rem;">Dashboard</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- end grid -->
+
+<div style="text-align:center;margin-top:3rem;color:var(--tm);font-size:0.8rem;">
+  QuizApp — Real-Time Quiz Platform · Built with Next.js 14 · Socket.IO · PostgreSQL
+</div>
+
+</body>
+</html>
